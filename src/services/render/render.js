@@ -1,21 +1,9 @@
-import { hooks as schemaHooks } from '@feathersjs/schema'
-import {
-  renderDataValidator,
-  renderPatchValidator,
-  renderQueryValidator,
-  renderResolver,
-  renderExternalResolver,
-  renderDataResolver,
-  renderPatchResolver,
-  renderQueryResolver
-} from './render.schema.js'
-import { RenderService, getOptions } from './render.class.js'
+import { RenderService } from './render.class.js'
 
 export const renderPath = 'render'
-export const renderMethods = ['find', 'get', 'create', 'patch', 'remove']
+export const renderMethods = ['create']
 
 export * from './render.class.js'
-export * from './render.schema.js'
 
 import { renderPuppeteer, initPuppeteer } from '../render/renderPuppeteer.js'
 import { Renderer } from '../render/renderPhantom.js'
@@ -28,18 +16,12 @@ const PhantomRenderer = Renderer.instance
 PhantomRenderer.init()
 
 export const render = (app) => {
-  app.use(renderPath, new RenderService(getOptions(app)), {
+  app.use(renderPath, new RenderService(), {
     methods: renderMethods
   })
   app.service(renderPath).hooks({
     around: {
-      all: [schemaHooks.resolveExternal(renderExternalResolver), schemaHooks.resolveResult(renderResolver)]
-    },
-    before: {
-      all: [schemaHooks.validateQuery(renderQueryValidator), schemaHooks.resolveQuery(renderQueryResolver)],
-
-      create: [schemaHooks.validateData(renderDataValidator), schemaHooks.resolveData(renderDataResolver)],
-      patch: [schemaHooks.validateData(renderPatchValidator), schemaHooks.resolveData(renderPatchResolver)]
+      all: []
     }
   })
 
@@ -54,15 +36,13 @@ export const render = (app) => {
       //Phantom renderer
       if (opts.settings.renderer === 'phantom') {
         let template = req.body
-
         const imageBuffer = await PhantomRenderer.renderImage(template, opts)
-        const image = Buffer.from(imageBuffer, 'base64')
 
-        if (!Buffer.isBuffer(image)) {
+        if (!Buffer.isBuffer(imageBuffer)) {
           throw new Error('imageBuffer is not a buffer object')
         }
         res.set(headers)
-        res.send(image)
+        res.send(imageBuffer)
       }
 
       // Puppeteer renderer
