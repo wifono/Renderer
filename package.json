@@ -1,0 +1,73 @@
+{
+  "name": "Renderer",
+  "description": "",
+  "version": "0.0.0",
+  "homepage": "",
+  "private": true,
+  "keywords": [
+    "feathers"
+  ],
+  "author": {},
+  "contributors": [],
+  "bugs": {},
+  "engines": {
+    "node": ">= 20.10.0"
+  },
+  "feathers": {
+    "language": "js",
+    "packager": "yarn",
+    "framework": "express",
+    "transports": [
+      "rest",
+      "websockets"
+    ],
+    "schema": "json"
+  },
+  "directories": {
+    "lib": "src",
+    "test": "test"
+  },
+  "main": "lib/index",
+  "type": "module",
+  "scripts": {
+    "start": "node src",
+    "dev": "nodemon src/",
+    "prettier": "npx prettier \"**/*.js\" --write",
+    "mocha": "cross-env NODE_ENV=test mocha test/ --recursive --exit",
+    "test": "npm run mocha",
+    "bundle:client": "npm pack --pack-destination ./public"
+  },
+  "dependencies": {
+    "@feathersjs/adapter-commons": "5.0.24",
+    "@feathersjs/authentication": "5.0.24",
+    "@feathersjs/authentication-client": "5.0.24",
+    "@feathersjs/configuration": "5.0.24",
+    "@feathersjs/errors": "5.0.24",
+    "@feathersjs/express": "5.0.24",
+    "@feathersjs/feathers": "5.0.24",
+    "@feathersjs/mongodb": "5.0.24",
+    "@feathersjs/schema": "5.0.24",
+    "@feathersjs/socketio": "5.0.24",
+    "@feathersjs/transport-commons": "5.0.24",
+    "canvas": "^2.11.2",
+    "canvg": "^4.0.1",
+    "clone-deep-circular-references": "^2.0.0",
+    "compression": "^1.7.4",
+    "dauria": "^2.0.0",
+    "dotenv": "^16.4.5",
+    "multer": "^1.4.5-lts.1",
+    "phantom": "^6.3.0",
+    "physical-cpu-count": "^2.0.0",
+    "puppeteer": "^22.6.4",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "@feathersjs/cli": "5.0.24",
+    "@feathersjs/rest-client": "5.0.24",
+    "axios": "1.6.7",
+    "cross-env": "^7.0.3",
+    "mocha": "10.3.0",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5"
+  }
+}

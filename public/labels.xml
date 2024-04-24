@@ -1,0 +1,2434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PrintLabelMaintenance xmlns:arts="http://www.nrf-arts.org/IXRetail/namespace/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <BusinessUnit TypeCode="RetailStore">195</BusinessUnit>
+  <Batch>
+    <BatchID>PrintLabels_200608_110900_0195_000001</BatchID>
+    <ExecutionDateTime>08.06.2020 11:09:00</ExecutionDateTime>
+    <CommonHeader>
+      <JobDescription>Nefunguje rozdělení adres,bílá,žlutá,traceable</JobDescription>
+      <Destination>195</Destination>
+      <Printer Model="KONICA MINOLTA 367Series" TrayBin="YELLOW" Duplex="False" Orientation="Portrait">P0195A3.ace.ahold.net</Printer>
+      <PrintTemplate>AholdV1</PrintTemplate>
+      <DataValidDate>08.06.2020</DataValidDate>
+    </CommonHeader>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">20301019</ItemID>
+      <MerchandiseHierarchy Level="Department">110020020070011</MerchandiseHierarchy>
+      <AlternativeItemID Value="20301019" />
+      <Display>
+        <Name><![CDATA[LENTILKY BONBONY TUBA 38G]]></Name>
+        <ShortName><![CDATA[LENTILKY TUBA 38G]]></ShortName>
+        <CommName1><![CDATA[Lentilky bonbony tuba]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>20301019</DefaultEAN>
+        <CodesDescription>20301019 • 8593893109759</CodesDescription>
+        <PluDescription />
+        <PriceGlyph>F</PriceGlyph>
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount>-26 %</PriceDiscount>
+        <PriceOld>14,90b</PriceOld>
+        <PriceText>10 JA</PriceText>
+        <PriceUnitText>1 kg = 286,85 Kč</PriceUnitText>
+        <VolumeText>38g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">10,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zad096 C / 5 / 01 / 2Sv</ShelfAddress>
+        <ShelfAddress>zhd900 A / 4 / 04 / 2Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">20301200</ItemID>
+      <MerchandiseHierarchy Level="Department">110020020070011</MerchandiseHierarchy>
+      <AlternativeItemID Value="20301200" />
+      <Display>
+        <Name><![CDATA[BONBONY LENTILKY 28G]]></Name>
+        <ShortName><![CDATA[BONB.LENTILKY 28G]]></ShortName>
+        <CommName1><![CDATA[Bonbony lentilky]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>20301200</DefaultEAN>
+        <CodesDescription>20301200 • 8593893306264</CodesDescription>
+        <PluDescription />
+        <PriceGlyph>F</PriceGlyph>
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount>-22 %</PriceDiscount>
+        <PriceOld>8,90a</PriceOld>
+        <PriceText>6 JA</PriceText>
+        <PriceUnitText>1 kg = 246,43 Kč</PriceUnitText>
+        <VolumeText>28g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">6,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 4 / 01 / 2Sv</ShelfAddress>
+        <ShelfAddress>zhdM21 A / 3 / 03 / 2</ShelfAddress>
+        <ShelfAddress>zxd022 D / 4 / 03 / 1Sv</ShelfAddress>
+        <ShelfAddress>zxd046 A / 99/ 02 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">22565754</ItemID>
+      <MerchandiseHierarchy Level="Department">110020020070011</MerchandiseHierarchy>
+      <AlternativeItemID Value="22565754" />
+      <Display>
+        <Name><![CDATA[BONBONY MEGA LENTILKY  60G]]></Name>
+        <ShortName><![CDATA[MEGA LENTILKY  60G]]></ShortName>
+        <CommName1><![CDATA[Bonbony mega lentilky]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>22565754</DefaultEAN>
+        <CodesDescription>22565754 • 8593893310094</CodesDescription>
+        <PluDescription />
+        <PriceGlyph>F</PriceGlyph>
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount>-26 %</PriceDiscount>
+        <PriceOld>22,90b</PriceOld>
+        <PriceText>16 JA</PriceText>
+        <PriceUnitText>1 kg = 281,67 Kč</PriceUnitText>
+        <VolumeText>60g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">16,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 4 / 03 / 1Sw</ShelfAddress>
+        <ShelfAddress>zxd022 D / 4 / 02 / 1Sw</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">24260664</ItemID>
+      <MerchandiseHierarchy Level="Department">110020020070011</MerchandiseHierarchy>
+      <AlternativeItemID Value="24260664" />
+      <Display>
+        <Name><![CDATA[LENTILKY BONBONY ČOKO. 150G]]></Name>
+        <ShortName><![CDATA[LENTILKY ČOKO. 150G]]></ShortName>
+        <CommName1><![CDATA[Lentilky bonbony čoko.]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>24260664</DefaultEAN>
+        <CodesDescription>24260664 • 8593893308558</CodesDescription>
+        <PluDescription />
+        <PriceGlyph>F</PriceGlyph>
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount>-25 %</PriceDiscount>
+        <PriceOld>46,90b</PriceOld>
+        <PriceText>34 JA</PriceText>
+        <PriceUnitText>1 kg = 232,67 Kč</PriceUnitText>
+        <VolumeText>150g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">34,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 4 / 02 / 2Sw</ShelfAddress>
+        <ShelfAddress>zxd022 D / 4 / 01 / 1Sw</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27027059</ItemID>
+      <MerchandiseHierarchy Level="Department">110020010020017</MerchandiseHierarchy>
+      <AlternativeItemID Value="27027059" />
+      <Display>
+        <Name><![CDATA[ORION HOŘKÁ ČOKO POMERANČ 95G]]></Name>
+        <ShortName><![CDATA[OR HO ČO POMERAN 95G]]></ShortName>
+        <CommName1><![CDATA[Orion hořká čoko pomeranč]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27027059</DefaultEAN>
+        <CodesDescription>27027059 • 7613036316880</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>54 JA</PriceText>
+        <PriceUnitText>1 kg = 577,90 Kč</PriceUnitText>
+        <VolumeText>95g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">54,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 5 / 06 / 2Sv</ShelfAddress>
+        <ShelfAddress>zxd020 A / 5 / 12 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27027066</ItemID>
+      <MerchandiseHierarchy Level="Department">110020010020017</MerchandiseHierarchy>
+      <AlternativeItemID Value="27027066" />
+      <Display>
+        <Name><![CDATA[ORION HOŘKÁ ČOKOL. MALINA 95G]]></Name>
+        <ShortName><![CDATA[OR HO ČO MALINA 95G]]></ShortName>
+        <CommName1><![CDATA[Orion hořká čokol. malina]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27027066</DefaultEAN>
+        <CodesDescription>27027066 • 7613036316910</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>54 JA</PriceText>
+        <PriceUnitText>1 kg = 577,90 Kč</PriceUnitText>
+        <VolumeText>95g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">54,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 5 / 05 / 2Sv</ShelfAddress>
+        <ShelfAddress>zxd020 A / 5 / 13 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="Separator"></ItemID>
+    </Item>
+
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27027080</ItemID>
+      <MerchandiseHierarchy Level="Department">110020010020017</MerchandiseHierarchy>
+      <AlternativeItemID Value="27027080" />
+      <Display>
+        <Name><![CDATA[ORION DARK68% KOUSKY K.B. 100G]]></Name>
+        <ShortName><![CDATA[OR DARK68% KOUS 100G]]></ShortName>
+        <CommName1><![CDATA[Orion dark68% kousky k.b.]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27027080</DefaultEAN>
+        <CodesDescription>27027080 • 8593893762572</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>54 JA</PriceText>
+        <PriceUnitText>1 kg = 549,00 Kč</PriceUnitText>
+        <VolumeText>100g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">54,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 5 / 02 / 2Sv</ShelfAddress>
+        <ShelfAddress>zxd020 A / 5 / 10 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">26725482</ItemID>
+      <MerchandiseHierarchy Level="Department">110020010020017</MerchandiseHierarchy>
+      <AlternativeItemID Value="26725482" />
+      <Display>
+        <Name><![CDATA[ORION HOŘKÁ ČOKOLÁDA 68% 100G]]></Name>
+        <ShortName><![CDATA[OR HOŘKÁ ČOKO. 100G]]></ShortName>
+        <CommName1><![CDATA[Orion hořká čokoláda 68%]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>26725482</DefaultEAN>
+        <CodesDescription>26725482 • 8593893755345</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>54 JA</PriceText>
+        <PriceUnitText>1 kg = 549,00 Kč</PriceUnitText>
+        <VolumeText>100g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">54,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 5 / 01 / 2Sv</ShelfAddress>
+        <ShelfAddress>zxd020 A / 5 / 08 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">26725512</ItemID>
+      <MerchandiseHierarchy Level="Department">110020010020017</MerchandiseHierarchy>
+      <AlternativeItemID Value="26725512" />
+      <Display>
+        <Name><![CDATA[ORION HOŘKÁ ČOK. MER/CHIL 100G]]></Name>
+        <ShortName><![CDATA[OR HO ČO ME/CHI 100G]]></ShortName>
+        <CommName1><![CDATA[Orion hořká čok. mer/chil]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>26725512</DefaultEAN>
+        <CodesDescription>26725512 • 8593893755680</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>54 JA</PriceText>
+        <PriceUnitText>1 kg = 549,00 Kč</PriceUnitText>
+        <VolumeText>100g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">54,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 5 / 04 / 1Sv</ShelfAddress>
+        <ShelfAddress>zxd020 A / 5 / 09 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">26975566</ItemID>
+      <MerchandiseHierarchy Level="Department">110020010030010</MerchandiseHierarchy>
+      <AlternativeItemID Value="26975566" />
+      <Display>
+        <Name><![CDATA[ORION OŘÍŠKOVÝ SEN DEZERT 154G]]></Name>
+        <ShortName><![CDATA[ORION DEZ OŘ SE 154G]]></ShortName>
+        <CommName1><![CDATA[Orion oříškový sen dezert]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>26975566</DefaultEAN>
+        <CodesDescription>26975566 • 8593893761193</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>84 JA</PriceText>
+        <PriceUnitText>1 kg = 551,30 Kč</PriceUnitText>
+        <VolumeText>154g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">84,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 6 / 03 / 1Sv</ShelfAddress>
+        <ShelfAddress>zxd020 I / 5 / 03 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">26975580</ItemID>
+      <MerchandiseHierarchy Level="Department">110020010030010</MerchandiseHierarchy>
+      <AlternativeItemID Value="26975580" />
+      <Display>
+        <Name><![CDATA[ORION ORIENT DEZERT 158G]]></Name>
+        <ShortName><![CDATA[ORION ORIENT DE 158G]]></ShortName>
+        <CommName1><![CDATA[Orion orient dezert]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>26975580</DefaultEAN>
+        <CodesDescription>26975580 • 8593893761742</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>84 JA</PriceText>
+        <PriceUnitText>1 kg = 537,35 Kč</PriceUnitText>
+        <VolumeText>158g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">84,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 6 / 04 / 1Sv</ShelfAddress>
+        <ShelfAddress>zxd020 I / 4 / 02 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">26975610</ItemID>
+      <MerchandiseHierarchy Level="Department">110020010030010</MerchandiseHierarchy>
+      <AlternativeItemID Value="26975610" />
+      <Display>
+        <Name><![CDATA[ORION DEZERT HVĚZDY 154G]]></Name>
+        <ShortName><![CDATA[ORION DEZ HVĚZD 154G]]></ShortName>
+        <CommName1><![CDATA[Orion dezert hvězdy]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>26975610</DefaultEAN>
+        <CodesDescription>26975610 • 8593893762367</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>84 JA</PriceText>
+        <PriceUnitText>1 kg = 551,30 Kč</PriceUnitText>
+        <VolumeText>154g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">84,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 6 / 05 / 1Sv</ShelfAddress>
+        <ShelfAddress>zxd020 I / 5 / 02 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">26975627</ItemID>
+      <MerchandiseHierarchy Level="Department">110020010030014</MerchandiseHierarchy>
+      <AlternativeItemID Value="26975627" />
+      <Display>
+        <Name><![CDATA[ORION MARASKA DEZERT 158G]]></Name>
+        <ShortName><![CDATA[ORION MARASKA 158G]]></ShortName>
+        <CommName1><![CDATA[Orion maraska dezert]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>26975627</DefaultEAN>
+        <CodesDescription>26975627 • 8593893761520</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>84 JA</PriceText>
+        <PriceUnitText>1 kg = 537,35 Kč</PriceUnitText>
+        <VolumeText>158g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">84,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 6 / 01 / 1Sv</ShelfAddress>
+        <ShelfAddress>zxd020 I / 4 / 05 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">26975634</ItemID>
+      <MerchandiseHierarchy Level="Department">110020010030010</MerchandiseHierarchy>
+      <AlternativeItemID Value="26975634" />
+      <Display>
+        <Name><![CDATA[ORION NUGÁT DEZERT 160G]]></Name>
+        <ShortName><![CDATA[ORION NUGÁT DEZ 160G]]></ShortName>
+        <CommName1><![CDATA[Orion nugát dezert]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>26975634</DefaultEAN>
+        <CodesDescription>26975634 • 8593893765764</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>84 JA</PriceText>
+        <PriceUnitText>1 kg = 530,63 Kč</PriceUnitText>
+        <VolumeText>160g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">84,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 6 / 02 / 1Sv</ShelfAddress>
+        <ShelfAddress>zxd020 I / 4 / 04 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27267349</ItemID>
+      <MerchandiseHierarchy Level="Department">110030100020022</MerchandiseHierarchy>
+      <AlternativeItemID Value="27267349" />
+      <Display>
+        <Name><![CDATA[MAGGI SAUCE TERIYAKI OM. 190ML]]></Name>
+        <ShortName><![CDATA[MAGGI SAUCE TERIYAKI]]></ShortName>
+        <CommName1><![CDATA[Maggi sauce teriyaki om.]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27267349</DefaultEAN>
+        <CodesDescription>27267349 • 7613039276914</CodesDescription>
+        <PluDescription />
+        <PriceGlyph>F</PriceGlyph>
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount>-26 %</PriceDiscount>
+        <PriceOld>29,90b</PriceOld>
+        <PriceText>21 JA</PriceText>
+        <PriceUnitText>1 l = 115,27 Kč</PriceUnitText>
+        <VolumeText>190ml</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">21,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 2 / 04 / 4</ShelfAddress>
+        <ShelfAddress>zxd059 E / 5 / 03 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27255063</ItemID>
+      <MerchandiseHierarchy Level="Department">110020040050010</MerchandiseHierarchy>
+      <AlternativeItemID Value="27255063" />
+      <Display>
+        <Name><![CDATA[DG COLD BREW 12KS]]></Name>
+        <ShortName><![CDATA[DG COLD BREW 12KS]]></ShortName>
+        <CommName1><![CDATA[Dg cold brew]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27255063</DefaultEAN>
+        <CodesDescription>27255063 • 7613038087290</CodesDescription>
+        <PluDescription />
+        <PriceGlyph>F</PriceGlyph>
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount>-26 %</PriceDiscount>
+        <PriceOld>149,90c</PriceOld>
+        <PriceText>109 JA</PriceText>
+        <PriceUnitText>1 ks = 9,16 Kč</PriceUnitText>
+        <VolumeText>12ks</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">109,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 2 / 02 / 2</ShelfAddress>
+        <ShelfAddress>zxd030 A / 4 / 05 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27255070</ItemID>
+      <MerchandiseHierarchy Level="Department">110020040030012</MerchandiseHierarchy>
+      <AlternativeItemID Value="27255070" />
+      <Display>
+        <Name><![CDATA[NESC.GOLD ESPRESSO INST.K.200G]]></Name>
+        <ShortName><![CDATA[NESC.GOLD ESPR.200G]]></ShortName>
+        <CommName1><![CDATA[Nesc.gold espresso inst.k.]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27255070</DefaultEAN>
+        <CodesDescription>27255070 • 7613039400333</CodesDescription>
+        <PluDescription />
+        <PriceGlyph>F</PriceGlyph>
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount>-53 %</PriceDiscount>
+        <PriceOld>279,00c</PriceOld>
+        <PriceText>129 JA</PriceText>
+        <PriceUnitText>1 kg = 649,50 Kč</PriceUnitText>
+        <VolumeText>200g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">129,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>s24694 G / 2 / 04 / 1Sv</ShelfAddress>
+        <ShelfAddress>zhd900 A / 2 / 01 / 4</ShelfAddress>
+        <ShelfAddress>zxd030 G / 7 / 02 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27218037</ItemID>
+      <MerchandiseHierarchy Level="Department">110020010030010</MerchandiseHierarchy>
+      <AlternativeItemID Value="27218037" />
+      <Display>
+        <Name><![CDATA[ORION ATELIÉR PRALINKY 186G]]></Name>
+        <ShortName><![CDATA[ORION ATELIÉR 186G]]></ShortName>
+        <CommName1><![CDATA[Orion ateliér pralinky]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27218037</DefaultEAN>
+        <CodesDescription>27218037 • 7613037013788</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>179 AA</PriceText>
+        <PriceUnitText>1 kg = 962,37 Kč</PriceUnitText>
+        <VolumeText>186g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">179,</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 5 / 07 / 1Sv</ShelfAddress>
+        <ShelfAddress>zxd020 I / 5 / 04 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27136232</ItemID>
+      <MerchandiseHierarchy Level="Department">110020010020017</MerchandiseHierarchy>
+      <AlternativeItemID Value="27136232" />
+      <Display>
+        <Name><![CDATA[ORION EXT.HOŘ. POMKURSKOŘ 100G]]></Name>
+        <ShortName><![CDATA[ORION EX.H.Č.PKS100G]]></ShortName>
+        <CommName1><![CDATA[Orion ext.hoř. pomkurskoř]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27136232</DefaultEAN>
+        <CodesDescription>27136232 • 8593893763166</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>54 JA</PriceText>
+        <PriceUnitText>1 kg = 549,00 Kč</PriceUnitText>
+        <VolumeText>100g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">54,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 5 / 03 / 2Sv</ShelfAddress>
+        <ShelfAddress>zxd020 A / 5 / 11 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27156391</ItemID>
+      <MerchandiseHierarchy Level="Department">110030050010012</MerchandiseHierarchy>
+      <AlternativeItemID Value="27156391" />
+      <Display>
+        <Name><![CDATA[MAGGI 5MIN BR KAŠE CIBULE 59G]]></Name>
+        <ShortName><![CDATA[5MIN BR KAŠE CIB.59G]]></ShortName>
+        <CommName1><![CDATA[Maggi 5min br kaše cibule]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27156391</DefaultEAN>
+        <CodesDescription>27156391 • 7613037011920</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>29 JA</PriceText>
+        <PriceUnitText>1 kg = 506,78 Kč</PriceUnitText>
+        <VolumeText>59g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">29,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 1 / 02 / 1</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27156407</ItemID>
+      <MerchandiseHierarchy Level="Department">110030050010012</MerchandiseHierarchy>
+      <AlternativeItemID Value="27156407" />
+      <Display>
+        <Name><![CDATA[MAGGI 5MIN CUP ŠPAG BOLOŇ 61G]]></Name>
+        <ShortName><![CDATA[5MIN ŠPAG BOLOŇ 61G]]></ShortName>
+        <CommName1><![CDATA[Maggi 5min cup špag boloň]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27156407</DefaultEAN>
+        <CodesDescription>27156407 • 7613037012248</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>29 JA</PriceText>
+        <PriceUnitText>1 kg = 490,17 Kč</PriceUnitText>
+        <VolumeText>61g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">29,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 1 / 03 / 1</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27156414</ItemID>
+      <MerchandiseHierarchy Level="Department">110030060010020</MerchandiseHierarchy>
+      <AlternativeItemID Value="27156414" />
+      <Display>
+        <Name><![CDATA[SP MAGGI DH FRANCOUZSKÁ 42G]]></Name>
+        <ShortName><![CDATA[SP DH FRANCOUZ 42G]]></ShortName>
+        <CommName1><![CDATA[Sp maggi dh francouzská]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27156414</DefaultEAN>
+        <CodesDescription>27156414 • 8585002438256</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>29 JA</PriceText>
+        <PriceUnitText>1 kg = 711,91 Kč</PriceUnitText>
+        <VolumeText>42g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">29,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 1 / 09 / 2Sv</ShelfAddress>
+        <ShelfAddress>zxd057 C / 7 / 01 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27156421</ItemID>
+      <MerchandiseHierarchy Level="Department">110030060010020</MerchandiseHierarchy>
+      <AlternativeItemID Value="27156421" />
+      <Display>
+        <Name><![CDATA[SP MAGGI DH SLEPIČÍ 41G]]></Name>
+        <ShortName><![CDATA[SP DH SLEPIČÍ 41G]]></ShortName>
+        <CommName1><![CDATA[Sp maggi dh slepičí]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27156421</DefaultEAN>
+        <CodesDescription>27156421 • 8585002438294</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>29 JA</PriceText>
+        <PriceUnitText>1 kg = 729,27 Kč</PriceUnitText>
+        <VolumeText>41g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">29,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 1 / 08 / 1Sv</ShelfAddress>
+        <ShelfAddress>zxd057 C / 7 / 03 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27156438</ItemID>
+      <MerchandiseHierarchy Level="Department">110030060010020</MerchandiseHierarchy>
+      <AlternativeItemID Value="27156438" />
+      <Display>
+        <Name><![CDATA[SP MAGGI DH GULÁŠOVÁ 46G]]></Name>
+        <ShortName><![CDATA[SP DH GULÁŠOVÁ 46G]]></ShortName>
+        <CommName1><![CDATA[Sp maggi dh gulášová]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27156438</DefaultEAN>
+        <CodesDescription>27156438 • 8585002438270</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>29 JA</PriceText>
+        <PriceUnitText>1 kg = 650,00 Kč</PriceUnitText>
+        <VolumeText>46g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">29,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 1 / 06 / 2Sv</ShelfAddress>
+        <ShelfAddress>zxd057 C / 7 / 04 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27156445</ItemID>
+      <MerchandiseHierarchy Level="Department">110030060010020</MerchandiseHierarchy>
+      <AlternativeItemID Value="27156445" />
+      <Display>
+        <Name><![CDATA[SP MAGGI DH HOVĚZÍ 40G]]></Name>
+        <ShortName><![CDATA[SP DH HOVĚZÍ 40G]]></ShortName>
+        <CommName1><![CDATA[Sp maggi dh hovězí]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27156445</DefaultEAN>
+        <CodesDescription>27156445 • 8585002438317</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>29 JA</PriceText>
+        <PriceUnitText>1 kg = 747,50 Kč</PriceUnitText>
+        <VolumeText>40g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">29,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 1 / 07 / 1Sv</ShelfAddress>
+        <ShelfAddress>zxd057 C / 7 / 02 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27156452</ItemID>
+      <MerchandiseHierarchy Level="Department">110030050010012</MerchandiseHierarchy>
+      <AlternativeItemID Value="27156452" />
+      <Display>
+        <Name><![CDATA[MAGGI 5MIN CUP GULÁŠ TĚSTO.55G]]></Name>
+        <ShortName><![CDATA[5MIN GULÁŠ TĚST 55G]]></ShortName>
+        <CommName1><![CDATA[Maggi 5min cup guláš těsto.]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27156452</DefaultEAN>
+        <CodesDescription>27156452 • 7613037072198</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>29 JA</PriceText>
+        <PriceUnitText>1 kg = 543,64 Kč</PriceUnitText>
+        <VolumeText>55g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">29,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 1 / 05 / 1</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27156469</ItemID>
+      <MerchandiseHierarchy Level="Department">110030050010012</MerchandiseHierarchy>
+      <AlternativeItemID Value="27156469" />
+      <Display>
+        <Name><![CDATA[MAGGI 5MIN TERIYAKI NUDLE 54G]]></Name>
+        <ShortName><![CDATA[5MIN TERIYAKI 54G]]></ShortName>
+        <CommName1><![CDATA[Maggi 5min teriyaki nudle]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27156469</DefaultEAN>
+        <CodesDescription>27156469 • 7613037073355</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>29 JA</PriceText>
+        <PriceUnitText>1 kg = 553,71 Kč</PriceUnitText>
+        <VolumeText>54g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">29,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 1 / 04 / 1</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27156506</ItemID>
+      <MerchandiseHierarchy Level="Department">110030050010012</MerchandiseHierarchy>
+      <AlternativeItemID Value="27156506" />
+      <Display>
+        <Name><![CDATA[MAGGI 5MIN BR KAŠE SLANINA 53G]]></Name>
+        <ShortName><![CDATA[5MIN BR KAŠE SLAN53G]]></ShortName>
+        <CommName1><![CDATA[Maggi 5min br kaše slanina]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27156506</DefaultEAN>
+        <CodesDescription>27156506 • 7613037011906</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>29 JA</PriceText>
+        <PriceUnitText>1 kg = 564,16 Kč</PriceUnitText>
+        <VolumeText>53g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">29,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 1 / 01 / 1</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27180457</ItemID>
+      <MerchandiseHierarchy Level="Department">110020040050010</MerchandiseHierarchy>
+      <AlternativeItemID Value="27180457" />
+      <Display>
+        <Name><![CDATA[SBUX DG CAPPUCCINO 12KS]]></Name>
+        <ShortName><![CDATA[SBUX DG CAPPUC.12KS]]></ShortName>
+        <CommName1><![CDATA[Sbux dg cappuccino]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27180457</DefaultEAN>
+        <CodesDescription>27180457 • 7613036989305</CodesDescription>
+        <PluDescription />
+        <PriceGlyph>F</PriceGlyph>
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount>-20 %</PriceDiscount>
+        <PriceOld>149,90c</PriceOld>
+        <PriceText>119 JA</PriceText>
+        <PriceUnitText>1 ks = 10,00 Kč</PriceUnitText>
+        <VolumeText>12ks</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">119,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 3 / 05 / 1</ShelfAddress>
+        <ShelfAddress>zxd030 A / 6 / 03 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27180464</ItemID>
+      <MerchandiseHierarchy Level="Department">110020040050010</MerchandiseHierarchy>
+      <AlternativeItemID Value="27180464" />
+      <Display>
+        <Name><![CDATA[SBUX DG CARAM.MACCHI.12KS]]></Name>
+        <ShortName><![CDATA[SBUX DG CAR.M.12KS]]></ShortName>
+        <CommName1><![CDATA[Sbux dg caram.macchi.]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27180464</DefaultEAN>
+        <CodesDescription>27180464 • 7613036989329</CodesDescription>
+        <PluDescription />
+        <PriceGlyph>F</PriceGlyph>
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount>-20 %</PriceDiscount>
+        <PriceOld>149,90c</PriceOld>
+        <PriceText>119 JA</PriceText>
+        <PriceUnitText>1 ks = 10,00 Kč</PriceUnitText>
+        <VolumeText>12ks</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">119,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 3 / 07 / 2</ShelfAddress>
+        <ShelfAddress>zxd030 A / 6 / 05 / 2Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27180471</ItemID>
+      <MerchandiseHierarchy Level="Department">110020040050010</MerchandiseHierarchy>
+      <AlternativeItemID Value="27180471" />
+      <Display>
+        <Name><![CDATA[SBUX DG LATTE MACCHIATO 12KS]]></Name>
+        <ShortName><![CDATA[SBUX DG MACCHI.12KS]]></ShortName>
+        <CommName1><![CDATA[Sbux dg latte macchiato]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27180471</DefaultEAN>
+        <CodesDescription>27180471 • 7613036989282</CodesDescription>
+        <PluDescription />
+        <PriceGlyph>F</PriceGlyph>
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount>-20 %</PriceDiscount>
+        <PriceOld>149,90c</PriceOld>
+        <PriceText>119 JA</PriceText>
+        <PriceUnitText>1 ks = 10,00 Kč</PriceUnitText>
+        <VolumeText>12ks</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">119,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 3 / 06 / 1</ShelfAddress>
+        <ShelfAddress>zxd030 A / 6 / 04 / 2Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27244777</ItemID>
+      <MerchandiseHierarchy Level="Department">110020040050014</MerchandiseHierarchy>
+      <AlternativeItemID Value="27244777" />
+      <Display>
+        <Name><![CDATA[SBUX ESPRESSO ROAST 10KS]]></Name>
+        <ShortName><![CDATA[SBUX ESPRES.10KS]]></ShortName>
+        <CommName1><![CDATA[Sbux espresso roast]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27244777</DefaultEAN>
+        <CodesDescription>27244777 • 7613037280265</CodesDescription>
+        <PluDescription />
+        <PriceGlyph>F</PriceGlyph>
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount>-20 %</PriceDiscount>
+        <PriceOld>99,90b</PriceOld>
+        <PriceText>79 JA</PriceText>
+        <PriceUnitText>1 ks = 7,99 Kč</PriceUnitText>
+        <VolumeText>10ks</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">79,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 3 / 01 / 1Sv</ShelfAddress>
+        <ShelfAddress>zxd030 A / 6 / 06 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27269510</ItemID>
+      <MerchandiseHierarchy Level="Department">110030100020022</MerchandiseHierarchy>
+      <AlternativeItemID Value="27269510" />
+      <Display>
+        <Name><![CDATA[MAGGI TEK.KOŘENÍ CHILLI 119G]]></Name>
+        <ShortName><![CDATA[MAGGI TEK.KOŘ.CHILLI]]></ShortName>
+        <CommName1><![CDATA[Maggi tek.koření chilli]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27269510</DefaultEAN>
+        <CodesDescription>27269510 • 7613035151024</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>79 JA</PriceText>
+        <PriceUnitText>1 kg = 671,43 Kč</PriceUnitText>
+        <VolumeText>119g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">79,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 2 / 05 / 4</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27193280</ItemID>
+      <MerchandiseHierarchy Level="Department">120050010020020</MerchandiseHierarchy>
+      <AlternativeItemID Value="27193280" />
+      <Display>
+        <Name><![CDATA[ORION GRANKO KAKA.MLEKO 200ML]]></Name>
+        <ShortName><![CDATA[ORION GRANKO 200ML]]></ShortName>
+        <CommName1><![CDATA[Orion granko kaka.mleko]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27193280</DefaultEAN>
+        <CodesDescription>27193280 • 8593893766709</CodesDescription>
+        <PluDescription />
+        <PriceGlyph />
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount />
+        <PriceOld />
+        <PriceText>15 JA</PriceText>
+        <PriceUnitText>1 l = 79,50 Kč</PriceUnitText>
+        <VolumeText>200ml</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">15,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 2 / 03 / 2Sv</ShelfAddress>
+        <ShelfAddress>zxf048 A / 1 / 01 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27179734</ItemID>
+      <MerchandiseHierarchy Level="Department">110020040050010</MerchandiseHierarchy>
+      <AlternativeItemID Value="27179734" />
+      <Display>
+        <Name><![CDATA[SBUX DG ESPRESSO ROAST 12KS]]></Name>
+        <ShortName><![CDATA[SBUX DG ESP.ROA.12KS]]></ShortName>
+        <CommName1><![CDATA[Sbux dg espresso roast]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27179734</DefaultEAN>
+        <CodesDescription>27179734 • 7613036988681</CodesDescription>
+        <PluDescription />
+        <PriceGlyph>F</PriceGlyph>
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount>-20 %</PriceDiscount>
+        <PriceOld>149,90c</PriceOld>
+        <PriceText>119 JA</PriceText>
+        <PriceUnitText>1 ks = 10,00 Kč</PriceUnitText>
+        <VolumeText>12ks</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">119,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 3 / 04 / 1</ShelfAddress>
+        <ShelfAddress>zxd030 A / 6 / 01 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27180709</ItemID>
+      <MerchandiseHierarchy Level="Department">110020040010015</MerchandiseHierarchy>
+      <AlternativeItemID Value="27180709" />
+      <Display>
+        <Name><![CDATA[SBUX BLONDE ESPRESSO ZRNO 200G]]></Name>
+        <ShortName><![CDATA[SBUX BL.ESPR.ZR.200G]]></ShortName>
+        <CommName1><![CDATA[Sbux blonde espresso zrno]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27180709</DefaultEAN>
+        <CodesDescription>27180709 • 7613036932073</CodesDescription>
+        <PluDescription />
+        <PriceGlyph>F</PriceGlyph>
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount>-15 %</PriceDiscount>
+        <PriceOld>129,90c</PriceOld>
+        <PriceText>109 JA</PriceText>
+        <PriceUnitText>1 kg = 549,50 Kč</PriceUnitText>
+        <VolumeText>200g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">109,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 3 / 09 / 1</ShelfAddress>
+        <ShelfAddress>zxd030 B / 3 / 04 / 2Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27180105</ItemID>
+      <MerchandiseHierarchy Level="Department">110020040020010</MerchandiseHierarchy>
+      <AlternativeItemID Value="27180105" />
+      <Display>
+        <Name><![CDATA[SBUX VERANDA ML.K.200G]]></Name>
+        <ShortName><![CDATA[SBUX VERANDA 200G]]></ShortName>
+        <CommName1><![CDATA[Sbux veranda ml.k.]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27180105</DefaultEAN>
+        <CodesDescription>27180105 • 7613036932158</CodesDescription>
+        <PluDescription />
+        <PriceGlyph>F</PriceGlyph>
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount>-15 %</PriceDiscount>
+        <PriceOld>129,90c</PriceOld>
+        <PriceText>109 JA</PriceText>
+        <PriceUnitText>1 kg = 549,50 Kč</PriceUnitText>
+        <VolumeText>200g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">109,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 3 / 11 / 1</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27180167</ItemID>
+      <MerchandiseHierarchy Level="Department">110020040020010</MerchandiseHierarchy>
+      <AlternativeItemID Value="27180167" />
+      <Display>
+        <Name><![CDATA[SBUX VERONA ML.K.200G]]></Name>
+        <ShortName><![CDATA[SBUX VERONA 200G]]></ShortName>
+        <CommName1><![CDATA[Sbux verona ml.k.]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27180167</DefaultEAN>
+        <CodesDescription>27180167 • 7613036932097</CodesDescription>
+        <PluDescription />
+        <PriceGlyph>F</PriceGlyph>
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount>-15 %</PriceDiscount>
+        <PriceOld>129,90c</PriceOld>
+        <PriceText>109 JA</PriceText>
+        <PriceUnitText>1 kg = 549,50 Kč</PriceUnitText>
+        <VolumeText>200g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">109,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 3 / 10 / 1</ShelfAddress>
+        <ShelfAddress>zxd030 D / 7 / 08 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27180174</ItemID>
+      <MerchandiseHierarchy Level="Department">110020040010015</MerchandiseHierarchy>
+      <AlternativeItemID Value="27180174" />
+      <Display>
+        <Name><![CDATA[SBUX ESPRESSO ZRNO 200G]]></Name>
+        <ShortName><![CDATA[SBUX ESPRES.ZRN.200G]]></ShortName>
+        <CommName1><![CDATA[Sbux espresso zrno]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27180174</DefaultEAN>
+        <CodesDescription>27180174 • 7613036932172</CodesDescription>
+        <PluDescription />
+        <PriceGlyph>F</PriceGlyph>
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount>-15 %</PriceDiscount>
+        <PriceOld>129,90c</PriceOld>
+        <PriceText>109 JA</PriceText>
+        <PriceUnitText>1 kg = 549,50 Kč</PriceUnitText>
+        <VolumeText>200g</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">109,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 3 / 08 / 1</ShelfAddress>
+        <ShelfAddress>zxd030 B / 3 / 06 / 2Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27244753</ItemID>
+      <MerchandiseHierarchy Level="Department">110020040050014</MerchandiseHierarchy>
+      <AlternativeItemID Value="27244753" />
+      <Display>
+        <Name><![CDATA[SBUX BLONDE ESPRES.10KS]]></Name>
+        <ShortName><![CDATA[SBUX BL.ESP.10KS]]></ShortName>
+        <CommName1><![CDATA[Sbux blonde espres.]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27244753</DefaultEAN>
+        <CodesDescription>27244753 • 7613037290752</CodesDescription>
+        <PluDescription />
+        <PriceGlyph>F</PriceGlyph>
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount>-20 %</PriceDiscount>
+        <PriceOld>99,90b</PriceOld>
+        <PriceText>79 JA</PriceText>
+        <PriceUnitText>1 ks = 7,99 Kč</PriceUnitText>
+        <VolumeText>10ks</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">79,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 3 / 03 / 1Sv</ShelfAddress>
+        <ShelfAddress>zxd030 A / 6 / 08 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+    <Item Action="PrintItem">
+      <ItemID Type="ItemID">27244760</ItemID>
+      <MerchandiseHierarchy Level="Department">110020040050014</MerchandiseHierarchy>
+      <AlternativeItemID Value="27244760" />
+      <Display>
+        <Name><![CDATA[SBUX COLOMBIA 10KS]]></Name>
+        <ShortName><![CDATA[SBUX COLOMB.10KS]]></ShortName>
+        <CommName1><![CDATA[Sbux colombia]]></CommName1>
+        <CommName2 />
+        <Description1 />
+        <Description2 />
+        <Allergens />
+        <CotText1 />
+        <CotText2 />
+        <CotText3 />
+        <LegalClassif />
+        <DefaultEAN>27244760</DefaultEAN>
+        <CodesDescription>27244760 • 7613037290875</CodesDescription>
+        <PluDescription />
+        <PriceGlyph>F</PriceGlyph>
+        <ProductGlyph1 />
+        <ProductGlyph2 />
+        <ProductGlyph3 />
+        <PriceDiscount>-20 %</PriceDiscount>
+        <PriceOld>99,90b</PriceOld>
+        <PriceText>79 JA</PriceText>
+        <PriceUnitText>1 ks = 7,99 Kč</PriceUnitText>
+        <VolumeText>10ks</VolumeText>
+        <SupplierText><![CDATA[NESTLÉ ČESKO S.R.O.]]></SupplierText>
+        <EmptiesText />
+        <NutriScore />
+        <Details />
+      </Display>
+      <ItemPrice ValueTypeCode="RegularSalesUnitPrice">79,9</ItemPrice>
+      <ShelfInformation>
+        <ShelfAddress>zhd900 A / 3 / 02 / 1Sv</ShelfAddress>
+        <ShelfAddress>zxd030 A / 6 / 09 / 1Sv</ShelfAddress>
+        <ShelfTemplate>NORMAL_V01</ShelfTemplate>
+      </ShelfInformation>
+      <TraceableItem>
+        <ParentID>99999999</ParentID>
+        <GradeClass />
+        <Variety />
+        <SizeCaliber />
+        <BioCertif />
+        <BioProduction />
+        <CropProtection />
+        <OriginFullOrBirth />
+        <OriginGrow />
+        <OriginSlaught />
+        <OriginCut />
+        <BeefTypeCZ />
+        <LotNumber />
+        <SlaughtApprovalNumber />
+        <CutApprovalNumber />
+        <ProducerText />
+        <ProducerAddress />
+      </TraceableItem>
+    </Item>
+  </Batch>
+</PrintLabelMaintenance>
