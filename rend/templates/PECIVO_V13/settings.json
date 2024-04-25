@@ -1,0 +1,5 @@
+{
+    "renderer": "puppeteer",
+    "omitBackground": true,
+    "size": true
+}

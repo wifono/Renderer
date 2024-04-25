@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title></title>
+    <script src="textFit.js"></script>
+    <style>
+      /* Základné štýly pre celú stránku */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #000000;
+      }
+
+      /* Štýly pre kontajner s cenovkou */
+      #tag {
+        width: 296px;
+        height: 160px;
+        position: relative;
+        overflow: hidden;
+        background-color: #ffffff;
+      }
+
+      /* Štýly pre názov produktu */
+      #name {
+        font-size: 35px;
+        font-weight: bold;
+        padding: 20px;
+      }
+
+      /* Štýly pre cenu */
+      #price_box {
+        padding: 10px;
+      }
+
+      #price {
+        color: black;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      #price_decimal {
+        font-size: 16px;
+      }
+
+      /* Štýly pre ikonu */
+      .logo {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 50px;
+        height: auto;
+      }
+
+      /* Štýly pre dodatočné informácie */
+      #sale_text,
+      #unit_price,
+      #weight,
+      #sku,
+      #reg {
+        font-size: 14px;
+        padding: 5px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="tag"
+      style="
+        width: 400px;
+        height: 300px;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        background-color: #ffff00;
+      "
+    >
+      <div id="name"></div>
+      <div id="price_box" style="color: black !important">
+        <div id="price" style="color: black !important"></div>
+        <div id="price_decimal"></div>
+        <div id="price_eur"></div>
+      </div>
+      <img class="logo" id="icon" src="logo.png" />
+      <div id="sale_text"></div>
+      <div id="unit_price"></div>
+      <div id="weight"></div>
+      <div id="sku"></div>
+      <div id="reg"></div>
+    </div>
+
+    <script>
+      function getID(ID) {
+        return document.getElementById(ID);
+      }
+
+      function setPageData(data) {
+        getID("name").innerHTML = data.name;
+        getID("price").innerHTML = data.pricetext;
+        getID("price_decimal").innerHTML = data.pricevalue;
+        getID("sale_text").innerHTML = data._traceable.producertext.value;
+        getID("unit_price").innerHTML = data.priceunittext;
+        getID("weight").innerHTML = data.volumetext;
+        getID("sku").innerHTML = data.defaultean;
+        getID("reg").innerHTML = "REG : " + data.store;
+
+        // Custom styling based on data attributes
+        // Modify as needed to fit your design
+        // Example:
+        // getID("price_box").style.backgroundColor =
+
+        getID("icon").src = data.Label.red === "true" ? "logo.png" : "logo.png";
+
+        // Additional styling and logic here...
+
+        textFit(getID("name"), {
+          minFontSize: 10,
+          maxFontSize: 40,
+          multiLine: false,
+          alignVert: true,
+        });
+
+        return true;
+      }
+    </script>
+  </body>
+</html>
