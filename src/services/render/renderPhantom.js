@@ -1,15 +1,14 @@
 import phantom from 'phantom'
 import amount from 'physical-cpu-count'
-import { cloneDeep } from 'clone-deep-circular-references'
 
 const singleton = Symbol()
 const singletonEnforcer = Symbol()
 const physicalCpuCount = amount
 
-const PHANTOM_INSTANCES = 2
+const PHANTOM_INSTANCES = 4
 const TEMPLATE_PATH = process.env.TEMPLATE_PATH
 
-export class Renderer {
+export class Phantom {
   constructor(enforcer) {
     if (enforcer != singletonEnforcer) {
       throw new Error('Cannot construct singleton')
@@ -36,7 +35,7 @@ export class Renderer {
 
   static get instance() {
     if (!this[singleton]) {
-      this[singleton] = new Renderer(singletonEnforcer)
+      this[singleton] = new Phantom(singletonEnforcer)
     }
     return this[singleton]
   }
@@ -65,68 +64,66 @@ export class Renderer {
     return this.counter++ % this.instances
   }
 
-  async initTemplate(template, attempt = 1) {
+  // Init template - otvorí sa stránka s templejtom
+  async initTemplate(template, opts) {
     this.initialising = true
+    let labelSettings = opts.data.Article.Label
     const templateName = template
-    console.info('Initializing template, attempt ' + attempt + ': ' + templateName)
+
+    console.info(`Initializing template: ${templateName} - ${opts._phantomKey}`)
+
+    let temp = []
+    let tempInUse = {}
 
     const settings = {
       top: 0,
       left: 0,
-      width: 400,
-      height: 300
+      width: labelSettings.width,
+      height: labelSettings.height
     }
 
     try {
-      const phantomKey = template.toString()
-      const temp = []
-      const tempInUse = {}
+      const phantomKey = `${opts._phantomKey}`
 
-      const pagePromises = []
       for (let i = 0; i < this.instances; i++) {
-        const filePath = 'file:///' + TEMPLATE_PATH + '/' + template + '/index.html'
-        const pagePromise = this.browsers[i].createPage().then(function (page) {
-          return page
-            .property('clipRect', settings)
-            .then(() =>
-              page.property(
-                'userAgent',
-                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
-              )
-            )
-            .then(() => page.property('dpi', '150'))
-            .then(() => page.open(filePath))
-            .then(() =>
-              page.evaluate(function () {
-                var style = document.createElement('style')
-                var text = document.createTextNode(
-                  'body { background-color: #FFFFFF; -webkit-font-smoothing: none !important; width: 400px !important; height: 400px !important; }'
-                )
-                style.setAttribute('type', 'text/css')
-                style.appendChild(text)
-                document.head.insertBefore(style, document.head.firstChild)
-              })
-            )
-            .then(() => {
-              temp.push(cloneDeep(page))
-              tempInUse[i] = false
-            })
-        })
-        pagePromises.push(pagePromise)
-      }
+        const filePath = `file:///${TEMPLATE_PATH}/${template}/index.html`
 
-      await Promise.all(pagePromises)
+        const pagePromise = this.browsers[i].createPage().then(async (page) => {
+          // Načítanie stránky a ďalšie operácie
+          await page.property('clipRect', settings)
+          await page.property(
+            'userAgent',
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
+          )
+          await page.property('dpi', '150')
+          await page.open(filePath)
+          await page.evaluate(function () {
+            var style = document.createElement('style')
+            var text = document.createTextNode(
+              'body { background-color: #FFFFFF; -webkit-font-smoothing: none !important; }'
+            )
+            style.setAttribute('type', 'text/css')
+            style.appendChild(text)
+            document.head.insertBefore(style, document.head.firstChild)
+          })
+
+          temp.push(page)
+          tempInUse[i] = false
+        })
+
+        await pagePromise
+      }
 
       this.templates[phantomKey] = temp
       this.templatesInUse[phantomKey] = tempInUse
 
       this.templatesConfig[templateName] = {
-        rotation: 0,
-        width: 400,
-        height: 300
+        width: labelSettings.width,
+        height: labelSettings.height
       }
 
       this.initialising = false
+
       return this.templates
     } catch (error) {
       console.error('Error initializing template:', error)
@@ -139,47 +136,53 @@ export class Renderer {
     return new Promise((resolve) => setTimeout(resolve, ms))
   }
 
-  async getTemplate(template) {
+  async getTemplate(template, opts) {
+    const phantomKey = opts._phantomKey
+
     if (this.initialising) {
       await this.sleep(500)
       this.initialising = false
+      return await this.getTemplate(template, opts)
     }
 
     const count = this.getCounter()
-    if (this.templates[template] === undefined) {
-      await this.initTemplate(template)
+    if (this.templates[phantomKey] === undefined) {
+      await this.initTemplate(template, opts)
     }
-
-    if (this.templatesInUse[template][count] === false) {
-      this.templatesInUse[template][count] = true
+    if (this.templatesInUse[phantomKey][count] === false) {
+      this.templatesInUse[phantomKey][count] = true
     }
 
     return this.templates
   }
 
-  async renderBase64(p, template) {
+  async renderBase64(p, phantomKey) {
     const count = this.getCounter()
     const t = await p.renderBase64('PNG')
-    this.templatesInUse[template][count] = false
+    this.templatesInUse[phantomKey][count] = false
     return t
   }
 
-  async renderImage(data) {
+  async renderImage(data, opts) {
     try {
       const template = data['@template'].replace(/\.[^.]+$/, '')
-      const page = await this.getTemplate(template)
+      opts['_phantomKey'] = opts.data.Article.Label.width + '_' + opts.data.Article.Label.height
+      const phantomKey = opts._phantomKey
+      console.time('Get Template:')
+      const page = await this.getTemplate(template, opts)
+      console.timeEnd('Get Template:')
 
       const eData = data.Article
 
-      // Evaluate page data without unnecessary promise chaining
-      await page[template][0].evaluate(function (arg) {
+      console.time('Evaluate:')
+      await page[phantomKey][0].evaluate(function (arg) {
         setPageData(arg)
       }, eData)
+      console.timeEnd('Evaluate:')
 
-      console.log('Evaluation completed')
-
-      // Render image directly without waiting for unnecessary Promise.resolve
-      const image = await this.renderBase64(page[template][0], template)
+      console.time('Render:')
+      const image = await this.renderBase64(page[phantomKey][0], phantomKey)
+      console.timeEnd('Render:')
       return Buffer.from(image, 'base64')
     } catch (error) {
       console.error('Error rendering image:', error)

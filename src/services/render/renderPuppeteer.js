@@ -1,125 +1,199 @@
 import puppeteer from 'puppeteer'
+import amount from 'physical-cpu-count'
 
-const PAGE_TIMEOUT = Number(process.env.PAGE_TIMEOUT) || 30
+const singleton = Symbol()
+const singletonEnforcer = Symbol()
+const physicalCpuCount = amount
 
-const pages = []
+const TEMPLATE_PATH = process.env.TEMPLATE_PATH
+const PUPPETEER_INSTANCES = process.env.PUPPETEER_INSTANCES
 
-let browser
-
-export const initPuppeteer = async (pagesNum) => {
-  if (pagesNum < 1) {
-    return
-  }
-  console.log('puppeteer start')
-  browser = await puppeteer.launch({
-    headless: true,
-    args: ['--no-sandbox']
-  })
-  const promises = []
-  for (let i = 0; i < pagesNum; i++) {
-    promises.push(browser.newPage())
-  }
-  await Promise.all(promises)
-  const bPages = await browser.pages()
-  for (let i = 0; i < bPages.length; i++) {
-    const id = `#P${String(i).padStart(3, '0')}`
-    const page = bPages[i]
-    page.on('console', (msg) => console.log(id, msg.text()))
-    page.emulateMediaType('print')
-    page.setDefaultTimeout(PAGE_TIMEOUT * 1000)
-    pages.push({ id, page, busy: false })
-    console.log(`${id} puppeteer instance started`)
-  }
-}
-
-// array of promise resolve for waiting jobs
-const waitJobs = []
-
-async function getPage() {
-  if (pages.length < 1) {
-    throw Error('no instances')
-  }
-  const page = pages.find((p) => !p.busy)
-  if (page) {
-    page.busy = true
-    return page
-  }
-  return new Promise((resolve) => {
-    waitJobs.push(resolve)
-  })
-}
-
-export const renderPuppeteer = async (opts) => {
-  const millis = Date.now()
-  const curPage = await getPage()
-  const { id, page } = curPage
-  const waitFree = (Date.now() - millis).toFixed(3)
-  console.log(`${id} waitFree: ${waitFree}ms`)
-  let res = '***'
-  try {
-    res = await renderPage(id, page, opts)
-  } finally {
-    releasePage(curPage)
-  }
-  return res
-}
-
-function releasePage(curPage) {
-  if (waitJobs.length) {
-    const resolve = waitJobs.shift()
-    resolve(curPage)
-  } else {
-    curPage.busy = false
-  }
-}
-
-async function renderPage(id, page, opts) {
-  console.time(`${id} total`)
-  console.time(`${id} goto`)
-
-  await page.goto(opts.url, { waitUntil: 'load' })
-  console.timeEnd(`${id} goto`)
-
-  if (opts.data) {
-    let article = opts.data.Article
-
-    console.time(`${id} evaluate`)
-    await page.evaluate(async (data) => await window.setPageData(data), article)
-
-    console.timeEnd(`${id} evaluate`)
-  }
-  console.time(`${id} waitFor`)
-
-  await page.waitForSelector('*')
-  console.timeEnd(`${id} waitFor`)
-
-  console.time(`${id} render`)
-  let res = ''
-  let width = 0
-  let height = 0
-
-  width = opts.data.Article.Label.width / 10
-  height = opts.data.Article.Label.height / 10
-
-  const options = { type: 'png' }
-  if (typeof opts.settings.omitBackground === 'boolean') {
-    options.omitBackground = true
-  }
-  if (typeof opts.settings.size === 'boolean') {
-    options.clip = {
-      x: 0,
-      y: 0,
-      width: width.toString(),
-      height: height.toString()
+export class Puppeteer {
+  constructor(enforcer) {
+    if (enforcer != singletonEnforcer) {
+      throw new Error('Cannot construct singleton')
     }
-  } else {
-    options.fullPage = true
+    //count of instances
+    console.info('Initializing renderer, count: ' + PUPPETEER_INSTANCES)
+    this.instances = parseInt(PUPPETEER_INSTANCES)
+    if (this.instances > physicalCpuCount * 2) {
+      console.info('Physical CPU count low, setting new renderer count: ' + physicalCpuCount)
+      this.instances = physicalCpuCount * 2
+    }
+    this.initialising = true
+
+    //internal counter
+    this.counter = 0
+    this.templates = {}
+    this.templatesConfig = {}
+    this.templatesInUse = {}
+    this.browsers = []
+    this.templateSources = []
+    this.url = ''
+    this.templateStats = {}
   }
 
-  res = await page.screenshot(options)
+  static get instance() {
+    if (!this[singleton]) {
+      this[singleton] = new Puppeteer(singletonEnforcer)
+    }
+    return this[singleton]
+  }
 
-  console.timeEnd(`${id} render`)
+  getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min
+  }
 
-  console.timeEnd(`${id} total`)
-  return res
+  // Vytvorenie nového browseru
+  async init() {
+    console.info('Renderer instances start')
+    for (var i = 1; i <= this.instances; i++) {
+      // Pushnutie browseru do this.browsers
+      const browser = await puppeteer.launch({
+        headless: false,
+        args: ['--no-sandbox']
+      })
+      this.browsers.push(browser)
+    }
+    await Promise.all(this.browsers)
+  }
+
+  getCounter() {
+    if (this.counter >= this.instances) {
+      this.counter = 0
+    }
+    return this.counter++ % this.instances
+  }
+
+  // Init template - otvorí sa stránka s templejtom
+  async initTemplate(template, opts) {
+    this.initialising = true
+    let labelSettings = opts.data.Article.Label
+    const templateName = template
+
+    console.info(`Initializing template: ${templateName} - ${opts._phantomKey}`)
+
+    const settings = {
+      width: labelSettings.width,
+      height: labelSettings.height
+    }
+
+    try {
+      const phantomKey = `${opts._phantomKey}`
+
+      // Kontrola, či máme otvorené stránky pre danú šablónu
+      if (!this.templates[phantomKey]) {
+        // Ak nie, inicializujte novú šablónu
+        const browserIndex = this.getCounter()
+        const browser = this.browsers[browserIndex]
+        const temp = []
+        const tempInUse = {}
+
+        const filePath = `file:///${TEMPLATE_PATH}/${template}/index.html`
+        for (let i = 0; i < 4; i++) {
+          // Vytvorte 4 taby pre každú šablónu
+          const page = await browser.newPage()
+          await page.setViewport({ width: parseInt(settings.width), height: parseInt(settings.height) })
+          await page.setUserAgent(
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
+          )
+          await page.goto(filePath, { waitUntil: 'load' })
+          await page.evaluate(function () {
+            var style = document.createElement('style')
+            var text = document.createTextNode(
+              'body { background-color: #FFFFFF; -webkit-font-smoothing: none !important; }'
+            )
+            style.setAttribute('type', 'text/css')
+            style.appendChild(text)
+            document.head.insertBefore(style, document.head.firstChild)
+          })
+
+          temp.push(page)
+          tempInUse[i] = false
+        }
+
+        this.templates[phantomKey] = temp
+        this.templatesInUse[phantomKey] = tempInUse
+
+        this.templatesConfig[templateName] = {
+          width: labelSettings.width,
+          height: labelSettings.height
+        }
+      }
+
+      this.initialising = false
+      console.log(this.templates)
+      return this.templates
+    } catch (error) {
+      console.error('Error initializing template:', error)
+      this.initialising = false
+      throw error
+    }
+  }
+
+  sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms))
+  }
+
+  async getTemplate(template, opts) {
+    const phantomKey = opts._phantomKey
+
+    if (this.initialising) {
+      await this.sleep(500)
+      this.initialising = false
+      return await this.getTemplate(template, opts)
+    }
+
+    const count = this.getCounter()
+    if (this.templates[phantomKey] === undefined) {
+      await this.initTemplate(template, opts)
+    }
+
+    if (this.templatesInUse[phantomKey][count] === false) {
+      this.templatesInUse[phantomKey][count] = true
+      return this.templates[phantomKey][count]
+    }
+    await this.sleep(this.getRandomInt(1, 10))
+    return await this.getTemplate(template, opts)
+  }
+
+  async renderBase64(p, phantomKey, opts) {
+    console.log(this.templatesInUse)
+    const count = this.getCounter()
+    const t = await p.screenshot(opts)
+    console.log(this.templatesInUse[phantomKey][count])
+
+    this.templatesInUse[phantomKey][count] = false
+    return t
+  }
+
+  async renderImage(data, opts) {
+    try {
+      const template = data['@template'].replace(/\.[^.]+$/, '')
+      opts['_phantomKey'] =
+        template + '_' + opts.data.Article.Label.width + '_' + opts.data.Article.Label.height
+      const phantomKey = opts._phantomKey
+      console.time('Get Template:')
+      const page = await this.getTemplate(template, opts)
+      console.timeEnd('Get Template:')
+
+      console.log('>>>>', page)
+
+      const eData = data.Article
+
+      console.time('Evaluate:')
+      await page.evaluate(function (arg) {
+        setPageData(arg)
+      }, eData)
+      console.timeEnd('Evaluate:')
+
+      console.time('Render:')
+      const image = await this.renderBase64(page, phantomKey)
+      console.timeEnd('Render:')
+      return Buffer.from(image, 'base64')
+    } catch (error) {
+      console.error('Error rendering image:', error)
+      throw error
+    }
+  }
 }

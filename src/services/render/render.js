@@ -5,15 +5,18 @@ export const renderMethods = ['create']
 
 export * from './render.class.js'
 
-import { renderPuppeteer, initPuppeteer } from '../render/renderPuppeteer.js'
-import { Renderer } from '../render/renderPhantom.js'
+import { Puppeteer } from '../render/renderPuppeteer.js'
+import { Phantom } from '../render/renderPhantom.js'
 import path from 'path'
 import fs from 'fs'
 
 const TEMPLATE_PATH = process.env.TEMPLATE_PATH
+const PhantomRenderer = Phantom.instance
+const PuppeteerRenderer = Puppeteer.instance
 
-const PhantomRenderer = Renderer.instance
-PhantomRenderer.init()
+const renderer = [{ framework: 'puppet' /*'puppet', 'phantom'  */ }]
+
+renderer[0].framework === 'phantom' ? await PhantomRenderer.init() : await PuppeteerRenderer.init()
 
 export const render = (app) => {
   app.use(renderPath, new RenderService(), {
@@ -37,7 +40,6 @@ export const render = (app) => {
       if (opts.settings.renderer === 'phantom') {
         let template = req.body
         const imageBuffer = await PhantomRenderer.renderImage(template, opts)
-
         if (!Buffer.isBuffer(imageBuffer)) {
           throw new Error('imageBuffer is not a buffer object')
         }
@@ -47,7 +49,8 @@ export const render = (app) => {
 
       // Puppeteer renderer
       if (opts.settings.renderer === 'puppeteer') {
-        const imageBuffer = await renderPuppeteer(opts)
+        let template = req.body
+        const imageBuffer = await PuppeteerRenderer.renderImage(template, opts)
         if (!Buffer.isBuffer(imageBuffer)) {
           throw new Error('imageBuffer is not a buffer object')
         }
@@ -68,7 +71,6 @@ async function renderOpts(req) {
 
   let data = req
   let settings = {}
-  console.log(url)
   const settingsFileName = path.join(TEMPLATE_PATH, template, 'settings.json')
   if (fs.existsSync(settingsFileName)) {
     const settingsRaw = fs.readFileSync(settingsFileName)
