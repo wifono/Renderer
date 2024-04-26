@@ -44,16 +44,15 @@ export class Puppeteer {
     return Math.floor(Math.random() * (max - min + 1)) + min
   }
 
-  // Vytvorenie nového browseru
   async init() {
     console.info('Renderer instances start')
     for (var i = 1; i <= this.instances; i++) {
-      // Pushnutie browseru do this.browsers
-      const browser = await puppeteer.launch({
-        headless: false,
-        args: ['--no-sandbox']
-      })
-      this.browsers.push(browser)
+      this.browsers.push(
+        await puppeteer.launch({
+          headless: true,
+          args: ['--no-sandbox']
+        })
+      )
     }
     await Promise.all(this.browsers)
   }
@@ -65,7 +64,6 @@ export class Puppeteer {
     return this.counter++ % this.instances
   }
 
-  // Init template - otvorí sa stránka s templejtom
   async initTemplate(template, opts) {
     this.initialising = true
     let labelSettings = opts.data.Article.Label
@@ -81,48 +79,41 @@ export class Puppeteer {
     try {
       const phantomKey = `${opts._phantomKey}`
 
-      // Kontrola, či máme otvorené stránky pre danú šablónu
-      if (!this.templates[phantomKey]) {
-        // Ak nie, inicializujte novú šablónu
-        const browserIndex = this.getCounter()
-        const browser = this.browsers[browserIndex]
-        const temp = []
-        const tempInUse = {}
+      const temp = []
+      const tempInUse = {}
+      const filePath = `file:///${TEMPLATE_PATH}/${template}/index.html`
 
-        const filePath = `file:///${TEMPLATE_PATH}/${template}/index.html`
-        for (let i = 0; i < 4; i++) {
-          // Vytvorte 4 taby pre každú šablónu
-          const page = await browser.newPage()
-          await page.setViewport({ width: parseInt(settings.width), height: parseInt(settings.height) })
-          await page.setUserAgent(
-            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
+      for (let i = 0; i < this.instances; i++) {
+        const page = await this.browsers[i].newPage()
+        await page.setViewport({ width: parseInt(settings.width), height: parseInt(settings.height) })
+        await page.setUserAgent(
+          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
+        )
+        await page.goto(filePath, { waitUntil: 'load' })
+        await this.sleep(10)
+        await page.evaluate(function () {
+          var style = document.createElement('style')
+          var text = document.createTextNode(
+            'body { background-color: #FFFFFF; !important; -webkit-font-smoothing: none !important; }'
           )
-          await page.goto(filePath, { waitUntil: 'load' })
-          await page.evaluate(function () {
-            var style = document.createElement('style')
-            var text = document.createTextNode(
-              'body { background-color: #FFFFFF; -webkit-font-smoothing: none !important; }'
-            )
-            style.setAttribute('type', 'text/css')
-            style.appendChild(text)
-            document.head.insertBefore(style, document.head.firstChild)
-          })
+          style.setAttribute('type', 'text/css')
+          style.appendChild(text)
+          document.head.insertBefore(style, document.head.firstChild)
+        })
 
-          temp.push(page)
-          tempInUse[i] = false
-        }
-
-        this.templates[phantomKey] = temp
-        this.templatesInUse[phantomKey] = tempInUse
-
-        this.templatesConfig[templateName] = {
-          width: labelSettings.width,
-          height: labelSettings.height
-        }
+        temp.push(page)
+        tempInUse[i] = false
       }
 
+      this.templates[phantomKey] = temp
+      this.templatesInUse[phantomKey] = tempInUse
+
+      this.templatesConfig[templateName] = {
+        width: labelSettings.width,
+        height: labelSettings.height
+      }
+      await this.sleep(100)
       this.initialising = false
-      console.log(this.templates)
       return this.templates
     } catch (error) {
       console.error('Error initializing template:', error)
@@ -158,10 +149,9 @@ export class Puppeteer {
   }
 
   async renderBase64(p, phantomKey, opts) {
-    console.log(this.templatesInUse)
     const count = this.getCounter()
+    await this.sleep(2)
     const t = await p.screenshot(opts)
-    console.log(this.templatesInUse[phantomKey][count])
 
     this.templatesInUse[phantomKey][count] = false
     return t
@@ -173,23 +163,15 @@ export class Puppeteer {
       opts['_phantomKey'] =
         template + '_' + opts.data.Article.Label.width + '_' + opts.data.Article.Label.height
       const phantomKey = opts._phantomKey
-      console.time('Get Template:')
       const page = await this.getTemplate(template, opts)
-      console.timeEnd('Get Template:')
-
-      console.log('>>>>', page)
 
       const eData = data.Article
-
-      console.time('Evaluate:')
+      await this.sleep(5)
       await page.evaluate(function (arg) {
         setPageData(arg)
       }, eData)
-      console.timeEnd('Evaluate:')
 
-      console.time('Render:')
       const image = await this.renderBase64(page, phantomKey)
-      console.timeEnd('Render:')
       return Buffer.from(image, 'base64')
     } catch (error) {
       console.error('Error rendering image:', error)

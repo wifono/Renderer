@@ -48,7 +48,6 @@ export class Phantom {
   async init() {
     console.info('Renderer instances start')
     for (var i = 1; i <= this.instances; i++) {
-      // Pushnutie browseru do this.browsers
       this.browsers.push(
         await phantom.create(['--local-url-access=true', '--disk-cache=true', '--max-disk-cache-size=10000'])
       )
@@ -64,7 +63,6 @@ export class Phantom {
     return this.counter++ % this.instances
   }
 
-  // Init template - otvorí sa stránka s templejtom
   async initTemplate(template, opts) {
     this.initialising = true
     let labelSettings = opts.data.Article.Label
@@ -89,7 +87,6 @@ export class Phantom {
         const filePath = `file:///${TEMPLATE_PATH}/${template}/index.html`
 
         const pagePromise = this.browsers[i].createPage().then(async (page) => {
-          // Načítanie stránky a ďalšie operácie
           await page.property('clipRect', settings)
           await page.property(
             'userAgent',
@@ -121,9 +118,8 @@ export class Phantom {
         width: labelSettings.width,
         height: labelSettings.height
       }
-
+      await this.sleep(100)
       this.initialising = false
-
       return this.templates
     } catch (error) {
       console.error('Error initializing template:', error)
@@ -149,15 +145,19 @@ export class Phantom {
     if (this.templates[phantomKey] === undefined) {
       await this.initTemplate(template, opts)
     }
+
     if (this.templatesInUse[phantomKey][count] === false) {
       this.templatesInUse[phantomKey][count] = true
+      return this.templates[phantomKey][count]
     }
 
-    return this.templates
+    await this.sleep(this.getRandomInt(1, 10))
+    return await this.getTemplate(template, opts)
   }
 
   async renderBase64(p, phantomKey) {
     const count = this.getCounter()
+    await this.sleep(2)
     const t = await p.renderBase64('PNG')
     this.templatesInUse[phantomKey][count] = false
     return t
@@ -166,7 +166,8 @@ export class Phantom {
   async renderImage(data, opts) {
     try {
       const template = data['@template'].replace(/\.[^.]+$/, '')
-      opts['_phantomKey'] = opts.data.Article.Label.width + '_' + opts.data.Article.Label.height
+      opts['_phantomKey'] =
+        template + '_' + opts.data.Article.Label.width + '_' + opts.data.Article.Label.height
       const phantomKey = opts._phantomKey
       console.time('Get Template:')
       const page = await this.getTemplate(template, opts)
@@ -175,13 +176,13 @@ export class Phantom {
       const eData = data.Article
 
       console.time('Evaluate:')
-      await page[phantomKey][0].evaluate(function (arg) {
+      await page.evaluate(function (arg) {
         setPageData(arg)
       }, eData)
       console.timeEnd('Evaluate:')
 
       console.time('Render:')
-      const image = await this.renderBase64(page[phantomKey][0], phantomKey)
+      const image = await this.renderBase64(page, phantomKey)
       console.timeEnd('Render:')
       return Buffer.from(image, 'base64')
     } catch (error) {
