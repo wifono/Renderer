@@ -1,5 +1,6 @@
 import puppeteer from 'puppeteer'
 import amount from 'physical-cpu-count'
+import fs from 'fs'
 
 const singleton = Symbol()
 const singletonEnforcer = Symbol()
@@ -13,7 +14,6 @@ export class Puppeteer {
     if (enforcer != singletonEnforcer) {
       throw new Error('Cannot construct singleton')
     }
-    //count of instances
     console.info('Initializing renderer, count: ' + PUPPETEER_INSTANCES)
     this.instances = parseInt(PUPPETEER_INSTANCES)
     if (this.instances > physicalCpuCount * 2) {
@@ -22,7 +22,6 @@ export class Puppeteer {
     }
     this.initialising = true
 
-    //internal counter
     this.counter = 0
     this.templates = {}
     this.templatesConfig = {}
@@ -31,6 +30,8 @@ export class Puppeteer {
     this.templateSources = []
     this.url = ''
     this.templateStats = {}
+    this.initialPages = 2
+    // this.sameTemplatePages = 20
   }
 
   static get instance() {
@@ -46,15 +47,15 @@ export class Puppeteer {
 
   async init() {
     console.info('Renderer instances start')
-    for (var i = 1; i <= this.instances; i++) {
-      this.browsers.push(
-        await puppeteer.launch({
-          headless: true,
-          args: ['--no-sandbox']
-        })
-      )
+    for (let i = 1; i <= this.instances; i++) {
+      const browser = await puppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox']
+      })
+
+      this.browsers.push(browser)
+      await this.initAllTemplates(browser) // Inicializácia šablón pre každý prehliadač
     }
-    await Promise.all(this.browsers)
   }
 
   getCounter() {
@@ -64,33 +65,23 @@ export class Puppeteer {
     return this.counter++ % this.instances
   }
 
-  async initTemplate(template, opts) {
-    this.initialising = true
-    let labelSettings = opts.data.Article.Label
-    const templateName = template
-
-    console.info(`Initializing template: ${templateName} - ${opts._phantomKey}`)
-
-    const settings = {
-      width: labelSettings.width,
-      height: labelSettings.height
-    }
-
+  async initAllTemplates(browser) {
     try {
-      const phantomKey = `${opts._phantomKey}`
+      const templateDirs = fs.readdirSync(TEMPLATE_PATH)
 
-      const temp = []
-      const tempInUse = {}
-      const filePath = `file:///${TEMPLATE_PATH}/${template}/index.html`
+      for (let i = 0; i < templateDirs.length; i++) {
+        const template = templateDirs[i]
+        const browserIndex = i % this.instances
+        const browserName = templateDirs[i]
 
-      for (let i = 0; i < this.instances; i++) {
-        const page = await this.browsers[i].newPage()
-        await page.setViewport({ width: parseInt(settings.width), height: parseInt(settings.height) })
+        const filePath = `file:///${TEMPLATE_PATH}/${template}/index.html`
+
+        const page = await browser.newPage()
         await page.setUserAgent(
           'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
         )
         await page.goto(filePath, { waitUntil: 'load' })
-        await this.sleep(10)
+        await this.sleep(5)
         await page.evaluate(function () {
           var style = document.createElement('style')
           var text = document.createTextNode(
@@ -99,6 +90,42 @@ export class Puppeteer {
           style.setAttribute('type', 'text/css')
           style.appendChild(text)
           document.head.insertBefore(style, document.head.firstChild)
+        })
+
+        this.templateSources.push({ browser, page, prior: browserName })
+        console.info(`Initializing template: ${template}`)
+      }
+    } catch (error) {
+      console.error('Error during initialising templates.', error)
+      throw error
+    }
+  }
+
+  async initTemplate(template, opts) {
+    this.initialising = true
+    let labelSettings = opts.data.Article.Label
+    const templateName = template
+
+    const settings = {
+      width: labelSettings.width,
+      height: labelSettings.height
+    }
+
+    try {
+      const phantomKey = `${opts._phantomKey}`
+      const temp = []
+      const tempInUse = {}
+
+      const templatePages = this.templateSources
+        .filter((source) => source.prior === template)
+        .map((source) => source.page)
+
+      for (let i = 0; i < templatePages.length; i++) {
+        const page = templatePages[i % templatePages.length]
+
+        await page.setViewport({
+          width: parseInt(settings.width),
+          height: parseInt(settings.height)
         })
 
         temp.push(page)
@@ -112,7 +139,8 @@ export class Puppeteer {
         width: labelSettings.width,
         height: labelSettings.height
       }
-      await this.sleep(100)
+
+      await this.sleep(50)
       this.initialising = false
       return this.templates
     } catch (error) {
@@ -130,7 +158,7 @@ export class Puppeteer {
     const phantomKey = opts._phantomKey
 
     if (this.initialising) {
-      await this.sleep(500)
+      await this.sleep(200)
       this.initialising = false
       return await this.getTemplate(template, opts)
     }
@@ -152,7 +180,6 @@ export class Puppeteer {
     const count = this.getCounter()
     await this.sleep(2)
     const t = await p.screenshot(opts)
-
     this.templatesInUse[phantomKey][count] = false
     return t
   }

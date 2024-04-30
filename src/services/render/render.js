@@ -39,6 +39,7 @@ export const render = (app) => {
       //Phantom renderer
       if (opts.settings.renderer === 'phantom') {
         let template = req.body
+
         const imageBuffer = await PhantomRenderer.renderImage(template, opts)
         if (!Buffer.isBuffer(imageBuffer)) {
           throw new Error('imageBuffer is not a buffer object')
